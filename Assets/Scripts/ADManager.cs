@@ -7,8 +7,8 @@ using UnityEngine.Advertisements;
 public class ADManager : MonoBehaviour
 {
     public static ADManager instance;
-    private string playstoreId = "3423855";
-    private string appstoreId = "3423854";
+    private string playstoreId = "";
+    private string appstoreId = "";
 
     private string videoad = "video";
     private string rewardedad = "rewardedVideo";
