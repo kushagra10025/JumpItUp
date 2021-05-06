@@ -7,12 +7,12 @@ public class AdsManager : MonoBehaviour
 {
     public static AdsManager instance;
     
-    private string adMobAppId = "ca-app-pub-5747530002884387~9103037005";
+    private string adMobAppId = "";
     private BannerView _bannerView;
     private InterstitialAd _interstitialAd;
     private RewardBasedVideoAd _rewardBasedVideoAd;
 
-    private string TestDeviceId = "2077ef9a63d2b398840261c8221a0c9b";
+    private string TestDeviceId = "";
 
     private void Awake()
     {
@@ -41,8 +41,7 @@ public class AdsManager : MonoBehaviour
     
     void RequestBanner()
     {
-        //string bannerId = "ca-app-pub-3940256099942544/6300978111";
-        string bannerId = "ca-app-pub-5747530002884387/9210029978";
+        string bannerId = "";
         _bannerView = new BannerView(bannerId,AdSize.Banner, AdPosition.Bottom);
 
         _bannerView.OnAdLoaded += HandleBannerOnAdLoaded;
@@ -81,8 +80,8 @@ public class AdsManager : MonoBehaviour
     #region IntersitialAd
     void RequestInterstitial()
     {
-        //string interstitalId = "ca-app-pub-3940256099942544/1033173712";
-        string interstitalId = "ca-app-pub-5747530002884387/3186890567";
+      
+        string interstitalId = "";
         _interstitialAd = new InterstitialAd(interstitalId);
 
         _interstitialAd.OnAdLoaded += HandleInterstitialOnAdLoaded;
@@ -116,8 +115,8 @@ public class AdsManager : MonoBehaviour
     #region RewardedVideoAd
     void RequestRewardedVideo()
     {
-        //string rewardId = "ca-app-pub-3940256099942544/5224354917";
-        string rewardId = "ca-app-pub-5747530002884387/9018458282";
+       
+        string rewardId = "";
         _rewardBasedVideoAd.OnAdLoaded += HandleRewardedOnAdLoaded;
         _rewardBasedVideoAd.OnAdFailedToLoad += HandleRewardedOnAdFailedToLoad;
         _rewardBasedVideoAd.OnAdOpening += HandleRewardedOnAdOpened;
